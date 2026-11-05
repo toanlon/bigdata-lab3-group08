@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "path": "data/changes/batch02_manifest.json",
+      "passed": true
+    },
+    {
+      "path": "data/changes/changes_batch02.csv",
+      "passed": true
+    },
+    {
+      "path": "data/changes/source_batch02.csv",
+      "passed": true
+    },
+    {
+      "path": "data/handoff/curated.csv",
+      "passed": true
+    },
+    {
+      "path": "data/handoff/handoff_manifest.json",
+      "passed": true
+    },
+    {
+      "path": "data/handoff/qa_reference.csv",
+      "passed": true
+    },
+    {
+      "path": "data/handoff/sensors.csv",
+      "passed": true
+    },
+    {
+      "path": "data/lab2_sources/observations_a.csv",
+      "passed": true
+    },
+    {
+      "path": "data/lab2_sources/observations_b.jsonl",
+      "passed": true
+    },
+    {
+      "path": "data/lab2_sources/qa_reference.csv",
+      "passed": true
+    },
+    {
+      "path": "data/lab2_sources/sensors.csv",
+      "passed": true
+    },
+    {
+      "path": "manifests/lab2_source_manifest.json",
+      "passed": true
+    },
+    {
+      "path": "schemas/gold_schema.json",
+      "passed": true
+    },
+    {
+      "path": "schemas/lab3_contract.json",
+      "passed": true
+    },
+    {
+      "path": "schemas/lineage_lab_profile.json",
+      "passed": true
+    },
+    {
+      "path": "schemas/silver_schema.json",
+      "passed": true
+    }
+  ],
+  "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "trust_note": "Authenticity of this manifest depends on the independent distribution channel."
+}

@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 0
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 1
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 2
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 3
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 4
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 5
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 6
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 7
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 8
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 9
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 10
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 11
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 12
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 13
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 14
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 15
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 16
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 17
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 18
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 19
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 20
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 21
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21879,
+      "partition": 22
+    },
+    {
+      "host": "cs-150298095083-default",
+      "pid": 21880,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}
