@@ -1,0 +1,6 @@
+member_id,role,authored_file,change_description,test_evidence,independent_cross_check,exit_response_file
+A,Data ingress,,,,,
+B,Lakehouse modeling,,,,,
+C,Incremental engineer,,,,,
+D,Analytics and measurement,,,,,
+E,Reproducibility reviewer,,,,,

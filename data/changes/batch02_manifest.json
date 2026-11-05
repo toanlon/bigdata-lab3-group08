@@ -1,0 +1,15 @@
+{
+  "batch_id": "batch-02",
+  "contract_id": "lakehouse-valid-revisions-v1",
+  "upstream_contract_id": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "row_count": 140,
+  "format": "csv",
+  "data_path": "changes_batch02.csv",
+  "data_sha256": "f746f21c91692f4911170707addf973b05d27134f071774886e2d472660cc031",
+  "source_object": "lab3/source_batch02.csv",
+  "source_path": "source_batch02.csv",
+  "source_sha256": "9c61bf8a4183e3ba040334059a451c7c72583ba45bd46def7bcb81bdde52a4bb",
+  "scope": "New, course-authored Lab 3 revision transport; not an original Lab 2 release. Rows satisfy inherited row rules; repeated business IDs are permitted across physical revisions.",
+  "policy": "Validate all rows before changing any table; reject the whole batch on failure. Resolve business-key revisions using ingest DESC, source_object ASC, source_row ASC; compare with the current Silver winner using the same ordering. No deletes, tombstones or registry changes in the core."
+}

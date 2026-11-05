@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Course structural subset for OpenLineage run events",
+  "description": "This is not the full official OpenLineage schema. Reuse the cached official 2-0-2 schema from Lab2 for full schema validation; verify paired states and actual I/O separately.",
+  "type": "object",
+  "required": [
+    "eventType",
+    "eventTime",
+    "run",
+    "job",
+    "inputs",
+    "outputs",
+    "producer",
+    "schemaURL"
+  ],
+  "properties": {
+    "eventType": {
+      "enum": [
+        "START",
+        "COMPLETE",
+        "FAIL",
+        "ABORT"
+      ]
+    },
+    "eventTime": {
+      "type": "string"
+    },
+    "run": {
+      "type": "object",
+      "required": [
+        "runId"
+      ],
+      "properties": {
+        "runId": {
+          "type": "string",
+          "format": "uuid"
+        }
+      }
+    },
+    "job": {
+      "type": "object",
+      "required": [
+        "namespace",
+        "name"
+      ],
+      "properties": {
+        "namespace": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "producer": {
+      "type": "string"
+    },
+    "schemaURL": {
+      "type": "string"
+    }
+  }
+}

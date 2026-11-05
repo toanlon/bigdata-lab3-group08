@@ -1,0 +1,13 @@
+{
+  "group_id": "g01",
+  "run_label": "attempt01",
+  "store_id": "bd-g01-objects",
+  "spark_master": "spark://spark-master:7077",
+  "lakehouse_root": "s3a://research-lakehouse/lab3",
+  "s3_endpoint": "http://objects.bd-g01.svc.cluster.local:8333",
+  "s3_region": "us-east-1",
+  "evidence_dir": "evidence",
+  "shuffle_partitions": 8,
+  "benchmark_copies": 100,
+  "extra_maven_packages": []
+}

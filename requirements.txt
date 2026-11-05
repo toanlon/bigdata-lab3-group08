@@ -1,0 +1,8 @@
+# Prepared image baseline, not a command to run during the 150 minutes.
+pyspark==4.0.1
+delta-spark==4.0.1
+boto3>=1.35,<2
+jsonschema>=4.23,<5
+matplotlib>=3.9,<4
+# TA preparation only: freeze exact transitive versions and image digest.
+# Python 3.11; Java 17 or 21. Hadoop-AWS JAR version must match bundled Hadoop.

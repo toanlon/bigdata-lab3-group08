@@ -1,0 +1,34 @@
+{
+  "contract_id": "lakehouse-valid-revisions-v1",
+  "upstream_contract_id": "research-telemetry-v1",
+  "as_of": "2026-02-09T00:00:00Z",
+  "unchanged_rules": [
+    "UTC timestamps",
+    "finite temperature in [-30,60] C",
+    "DECIMAL(8,2)",
+    "event <= ingest <= AS_OF",
+    "late if lag_seconds > 900; late does not mean invalid",
+    "registry supplies site",
+    "no operator_email or raw_payload in release"
+  ],
+  "bronze_receipt_key": [
+    "source_object",
+    "source_row",
+    "source_sha256"
+  ],
+  "silver_business_key": [
+    "record_id"
+  ],
+  "winner_order": [
+    "ingest_time_utc DESC",
+    "source_object ASC",
+    "source_row ASC"
+  ],
+  "batch_policy": "All inherited row rules and input-byte checks must pass before any write. An invalid incoming revision batch is rejected as a whole, not repaired by reverting to older versions within the batch.",
+  "change_scope": "Validated observation revisions only. No business deletes, CDC tombstones, sensor registry changes or automatic schema evolution.",
+  "single_writer": "One Spark driver per table at a time; serial task commands.",
+  "benchmark_date": "2026-02-06",
+  "benchmark_copies": 100,
+  "benchmark_exclusion": "Never put expanded benchmark rows into operational Bronze/Silver/Gold.",
+  "retention": "Do not run VACUUM or delete files/logs referenced by any approved release."
+}

@@ -1,0 +1,33 @@
+{
+  "handoff_id": "lab2-research-telemetry-v1-reference-handoff",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "source_fixture_version": "research-telemetry-v1",
+  "upstream_lab": "Lab 2",
+  "as_of": "2026-02-09T00:00:00Z",
+  "data_format": "csv_transport_for_the_lab2_ten_column_schema",
+  "data_path": "curated.csv",
+  "data_sha256": "5770802a599a2931751f5ccd41e0305a03c98a08bdf5504ac8df0d1f990d8c1d",
+  "logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "row_count": 9610,
+  "columns": [
+    "record_id",
+    "sensor_id",
+    "site",
+    "event_time_utc",
+    "ingest_time_utc",
+    "temperature_c",
+    "is_late",
+    "source_object",
+    "source_row",
+    "source_sha256"
+  ],
+  "timestamp_timezone": "UTC",
+  "temperature_type": "DECIMAL(8,2)",
+  "lab2_source_manifest_sha256": "77dacfdb5a8b4e82fb2316990972de731a51b31f9fc052d739d0dea78e992331",
+  "purpose": "TA-derived transport fixture for Lab 3 when no approved team Lab 2 Parquet is supplied. Do not claim this is a team-signed release.",
+  "limitations": [
+    "The 100-row QA sample is validation only; five disagreements remain unchanged.",
+    "The CSV is a logical-equivalence fallback; Parquet byte identity is not expected.",
+    "The raw sources contain synthetic optional restricted emails and are not analyst-release assets."
+  ]
+}

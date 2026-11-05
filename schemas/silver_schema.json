@@ -1,0 +1,72 @@
+{
+  "schema_id": "lab3-silver-v1",
+  "inherits": "Lab2 research-telemetry-v1 ten-column release; adds event_date only",
+  "columns": [
+    {
+      "name": "record_id",
+      "type": "STRING",
+      "meaning": "Normalized measurement business key",
+      "unit": null
+    },
+    {
+      "name": "sensor_id",
+      "type": "STRING",
+      "meaning": "Registry key",
+      "unit": null
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "meaning": "Site supplied by the unchanged Lab 2 registry",
+      "unit": null
+    },
+    {
+      "name": "event_time_utc",
+      "type": "TIMESTAMP",
+      "meaning": "Observation event time",
+      "unit": "UTC"
+    },
+    {
+      "name": "ingest_time_utc",
+      "type": "TIMESTAMP",
+      "meaning": "Source arrival timestamp used to order revisions",
+      "unit": "UTC"
+    },
+    {
+      "name": "temperature_c",
+      "type": "DECIMAL(8,2)",
+      "meaning": "Released temperature, not QA-adjusted",
+      "unit": "Celsius"
+    },
+    {
+      "name": "is_late",
+      "type": "BOOLEAN",
+      "meaning": "True iff ingest_time - event_time > 900 seconds",
+      "unit": null
+    },
+    {
+      "name": "source_object",
+      "type": "STRING",
+      "meaning": "Source object identifier; resolve through trusted manifests",
+      "unit": null
+    },
+    {
+      "name": "source_row",
+      "type": "BIGINT",
+      "meaning": "One-based physical record ordinal, excluding CSV header",
+      "unit": null
+    },
+    {
+      "name": "source_sha256",
+      "type": "STRING",
+      "meaning": "SHA-256 of original source object bytes, not a row hash",
+      "unit": null
+    },
+    {
+      "name": "event_date",
+      "type": "DATE",
+      "meaning": "UTC calendar date derived from event_time_utc",
+      "unit": "UTC date"
+    }
+  ]
+}

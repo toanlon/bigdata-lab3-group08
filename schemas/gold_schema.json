@@ -1,0 +1,71 @@
+{
+  "schema_id": "lab3-gold-v1",
+  "columns": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "meaning": "Registry site",
+      "unit": null
+    },
+    {
+      "name": "event_date",
+      "type": "DATE",
+      "meaning": "UTC event date",
+      "unit": "UTC date"
+    },
+    {
+      "name": "n_observations",
+      "type": "BIGINT",
+      "meaning": "Count of retained Silver measurement keys",
+      "unit": null
+    },
+    {
+      "name": "sum_temperature_c",
+      "type": "DECIMAL(18,2)",
+      "meaning": "Sum of retained temperatures for weighted rollups",
+      "unit": "Celsius (sum)"
+    },
+    {
+      "name": "mean_temperature_c",
+      "type": "DECIMAL(18,6)",
+      "meaning": "sum_temperature_c / n_observations",
+      "unit": "Celsius"
+    },
+    {
+      "name": "min_temperature_c",
+      "type": "DECIMAL(18,2)",
+      "meaning": "Minimum retained temperature",
+      "unit": "Celsius"
+    },
+    {
+      "name": "max_temperature_c",
+      "type": "DECIMAL(18,2)",
+      "meaning": "Maximum retained temperature",
+      "unit": "Celsius"
+    },
+    {
+      "name": "n_late",
+      "type": "BIGINT",
+      "meaning": "Count with is_late = true",
+      "unit": null
+    },
+    {
+      "name": "late_rate",
+      "type": "DECIMAL(18,6)",
+      "meaning": "n_late / n_observations",
+      "unit": "fraction"
+    },
+    {
+      "name": "n_above_25",
+      "type": "BIGINT",
+      "meaning": "Count with temperature_c strictly greater than 25",
+      "unit": "teaching threshold"
+    },
+    {
+      "name": "n_sensors",
+      "type": "BIGINT",
+      "meaning": "Distinct reporting sensor IDs per site/date",
+      "unit": null
+    }
+  ]
+}
