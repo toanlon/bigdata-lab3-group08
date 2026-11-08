@@ -10,11 +10,15 @@
   "bronze_initial_version": 0,
   "silver_initial_version": 0,
   "gold_initial_version": 0,
-  "silver_final_version": 0,
-  "gold_final_version": 0,
-  "gold_source_silver_version": 0,
-  "initial_implementation_sha256": "c891004b8634bf0d330207136a8376d0980349e9b14ad70883133a4e8e29bc53",
+  "silver_final_version": 1,
+  "gold_final_version": 1,
+  "gold_source_silver_version": 1,
+  "initial_implementation_sha256": "1ef903e4f86ddf01b848e575964bc5fea39d4aa58ae8b9e89bd8dbc8507d1013",
   "run_ids": {
-    "bootstrap": "769b1942-8fbb-4527-a7cb-6bb1f4976d19"
-  }
+    "bootstrap": "377470f3-e939-420c-8c57-7bac8c33b30f",
+    "incremental": "28e2c1c5-6a34-4fad-8d93-00b72c2e35fd"
+  },
+  "bronze_final_version": 1,
+  "silver_replay_version": 2,
+  "final_implementation_sha256": "1ef903e4f86ddf01b848e575964bc5fea39d4aa58ae8b9e89bd8dbc8507d1013"
 }
