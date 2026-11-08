@@ -5,7 +5,7 @@
   "java": "21.0.12.1",
   "hadoop": "3.5.0",
   "spark_master": "local[2]",
-  "application_id": "local-1794074657070",
+  "application_id": "local-1794115720020",
   "timezone": "UTC",
   "aqe": "true",
   "shuffle_partitions": "8",

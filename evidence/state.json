@@ -1,12 +1,12 @@
 {
   "group_id": "g08",
-  "run_label": "attempt01",
+  "run_label": "attempt02",
   "handoff_kind": "course_fallback_not_student_approval",
   "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
   "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
-  "bronze_path": "/tmp/lab3-lakehouse/g08/attempt01/tables/bronze",
-  "silver_path": "/tmp/lab3-lakehouse/g08/attempt01/tables/silver",
-  "gold_path": "/tmp/lab3-lakehouse/g08/attempt01/tables/gold",
+  "bronze_path": "/tmp/lab3-lakehouse/g08/attempt02/tables/bronze",
+  "silver_path": "/tmp/lab3-lakehouse/g08/attempt02/tables/silver",
+  "gold_path": "/tmp/lab3-lakehouse/g08/attempt02/tables/gold",
   "bronze_initial_version": 0,
   "silver_initial_version": 0,
   "gold_initial_version": 0,
@@ -15,6 +15,6 @@
   "gold_source_silver_version": 0,
   "initial_implementation_sha256": "c891004b8634bf0d330207136a8376d0980349e9b14ad70883133a4e8e29bc53",
   "run_ids": {
-    "bootstrap": "42efe1dd-e1fe-432f-aee5-b72c4bbf9575"
+    "bootstrap": "769b1942-8fbb-4527-a7cb-6bb1f4976d19"
   }
 }

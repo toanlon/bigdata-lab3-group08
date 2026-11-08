@@ -1,6 +1,6 @@
 {
   "group_id": "g08",
-  "run_label": "attempt01",
+  "run_label": "attempt02",
   "store_id": "local-course-fixture",
   "spark_master": "local[2]",
   "lakehouse_root": "/tmp/lab3-lakehouse",
