@@ -1,0 +1,7 @@
+{
+  "run_id": "bf2e22fa-4076-42c5-9b36-89ef86526b25",
+  "job": "bootstrap",
+  "status": "ABORT",
+  "error_type": "ContractError",
+  "message": "USE_NEW_RUN_LABEL_OR_RESUME_NEXT_STEP"
+}
