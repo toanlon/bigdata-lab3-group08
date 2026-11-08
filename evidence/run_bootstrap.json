@@ -1,10 +1,10 @@
 {
-  "run_id": "769b1942-8fbb-4527-a7cb-6bb1f4976d19",
+  "run_id": "377470f3-e939-420c-8c57-7bac8c33b30f",
   "job": "bootstrap",
   "status": "COMPLETE",
   "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
-  "implementation_sha256": "c891004b8634bf0d330207136a8376d0980349e9b14ad70883133a4e8e29bc53",
-  "scaffold_sha256": "ddf66b0a3090f34566391bbffabc1471e8aa96638b56c37e035f8ef3ee843935",
+  "implementation_sha256": "1ef903e4f86ddf01b848e575964bc5fea39d4aa58ae8b9e89bd8dbc8507d1013",
+  "scaffold_sha256": "c70f31c04e4ec08cd9ac58c2b6829de52f79f3ec57f6760ac556cff0205f9839",
   "outputs": [
     "/tmp/lab3-lakehouse/g08/attempt02/tables/bronze",
     "/tmp/lab3-lakehouse/g08/attempt02/tables/silver",

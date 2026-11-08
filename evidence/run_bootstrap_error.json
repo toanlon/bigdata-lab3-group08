@@ -1,7 +1,7 @@
 {
-  "run_id": "bf2e22fa-4076-42c5-9b36-89ef86526b25",
+  "run_id": "58d4a676-da8b-4f46-8575-ac62f0f9dd09",
   "job": "bootstrap",
-  "status": "ABORT",
-  "error_type": "ContractError",
-  "message": "USE_NEW_RUN_LABEL_OR_RESUME_NEXT_STEP"
+  "status": "FAIL",
+  "error_type": "AnalysisException",
+  "message": "[DELTA_PATH_EXISTS] Cannot write to already existent path file:/tmp/lab3-lakehouse/g08/attempt02/tables/silver without setting OVERWRITE = 'true'."
 }

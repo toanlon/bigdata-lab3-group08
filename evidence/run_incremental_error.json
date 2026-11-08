@@ -1,0 +1,7 @@
+{
+  "run_id": "65ed8edd-fd9f-4cee-9f16-96b540571ab7",
+  "job": "incremental",
+  "status": "FAIL",
+  "error_type": "AnalysisException",
+  "message": "[DELTA_MISSING_DELTA_TABLE] `/tmp/lab3-lakehouse/g08/attempt02/tables/silver` is not a Delta table."
+}

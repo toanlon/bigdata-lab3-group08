@@ -3,6 +3,8 @@ Use the function signatures exactly: src/run_lab.py imports this module.
 All functions operate on Spark DataFrames except validate_release_binding.
 """
 from pyspark.sql import functions as F
+from pyspark.sql.window import Window
+from delta.tables import DeltaTable
 
 def build_gold(silver_df):
     """TODO 1 (T2). Group by site and UTC event_date.
@@ -82,7 +84,26 @@ def choose_revisions(changes_df):
     Use a deterministic Window and ROW_NUMBER. Return original columns;
     do not leak the helper rank column into a Delta table.
     """
-    raise NotImplementedError('TODO 2: choose_revisions')
+    window_spec = Window.partitionBy("record_id").orderBy(
+        F.col("ingest_time_utc").desc(),
+        F.col("source_object").asc(),
+        F.col("source_row").cast("int").asc()
+    )
+
+    df_with_date = changes_df
+    if "event_date" not in df_with_date.columns:
+        df_with_date = df_with_date.withColumn("event_date", F.to_date(F.col("event_time_utc")))
+
+    original_cols = df_with_date.columns
+
+    winners_df = (
+        df_with_date
+        .withColumn("row_num", F.row_number().over(window_spec))
+        .filter(F.col("row_num") == 1)
+        .select(*original_cols)
+    )
+
+    return winners_df
 
 
 def merge_silver(spark, silver_path, winners_df):
@@ -92,7 +113,22 @@ def merge_silver(spark, silver_path, winners_df):
     Equal provenance and ingest timestamp is a no-op. Stale data must not
     replace a newer value. The runner validates the WHOLE batch first.
     """
-    raise NotImplementedError('TODO 3: merge_silver')
+    silver_table = DeltaTable.forPath(spark, silver_path)
+    update_condition = (
+        "(source.ingest_time_utc > target.ingest_time_utc) OR "
+        "(source.ingest_time_utc = target.ingest_time_utc AND source.source_object < target.source_object) OR "
+        "(source.ingest_time_utc = target.ingest_time_utc AND source.source_object = target.source_object AND source.source_row < target.source_row)"
+    )
+    (
+        silver_table.alias("target")
+        .merge(
+            winners_df.alias("source"),
+            "target.record_id = source.record_id"
+        )
+        .whenMatchedUpdateAll(condition=update_condition)
+        .whenNotMatchedInsertAll()
+        .execute()
+    )
 
 
 def benchmark_query(df):
