@@ -2,6 +2,7 @@
 Use the function signatures exactly: src/run_lab.py imports this module.
 All functions operate on Spark DataFrames except validate_release_binding.
 """
+from pyspark.sql import functions as F
 
 def build_gold(silver_df):
     """TODO 1 (T2). Group by site and UTC event_date.
@@ -14,7 +15,65 @@ def build_gold(silver_df):
     Cast sums/min/max to decimal(18,2), mean/rate to decimal(18,6).
     No collect(), Pandas, Python UDF, or reference-sample join here.
     """
-    raise NotImplementedError('TODO 1: build_gold')
+    gold_df = (
+        silver_df
+        .groupBy("site", "event_date")
+        .agg(
+            F.count("*").alias("n_observations"),
+
+            F.sum("temperature_c")
+             .cast("decimal(18,2)")
+             .alias("sum_temperature_c"),
+
+            F.min("temperature_c")
+             .cast("decimal(18,2)")
+             .alias("min_temperature_c"),
+
+            F.max("temperature_c")
+             .cast("decimal(18,2)")
+             .alias("max_temperature_c"),
+
+            F.sum(
+                F.when(F.col("is_late"), 1).otherwise(0)
+            ).alias("n_late"),
+
+            F.sum(
+                F.when(F.col("temperature_c") > 25, 1)
+                 .otherwise(0)
+            ).alias("n_above_25"),
+
+            F.countDistinct("sensor_id").alias("n_sensors")
+        )
+        .withColumn(
+            "mean_temperature_c",
+            (
+                F.col("sum_temperature_c") /
+                F.col("n_observations")
+            ).cast("decimal(18,6)")
+        )
+        .withColumn(
+            "late_rate",
+            (
+                F.col("n_late") /
+                F.col("n_observations")
+            ).cast("decimal(18,6)")
+        )
+        .select(
+            "site",
+            "event_date",
+            "n_observations",
+            "sum_temperature_c",
+            "mean_temperature_c",
+            "min_temperature_c",
+            "max_temperature_c",
+            "n_late",
+            "late_rate",
+            "n_above_25",
+            "n_sensors"
+        )
+    )
+
+    return gold_df
 
 
 def choose_revisions(changes_df):
