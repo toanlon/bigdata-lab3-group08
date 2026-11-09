@@ -1,0 +1,146 @@
+{
+  "gold_version": 1,
+  "sql": "SELECT site,event_date,n_observations,n_above_25,\n                         CAST(n_above_25/n_observations AS DECIMAL(18,6)) AS above25_rate\n                         FROM gold ORDER BY event_date,above25_rate DESC,site",
+  "rows": [
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-02",
+      "n_observations": 620,
+      "n_above_25": 254,
+      "above25_rate": "0.409677"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-02",
+      "n_observations": 619,
+      "n_above_25": 224,
+      "above25_rate": "0.361874"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-02",
+      "n_observations": 625,
+      "n_above_25": 131,
+      "above25_rate": "0.209600"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-02",
+      "n_observations": 625,
+      "n_above_25": 130,
+      "above25_rate": "0.208000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "n_above_25": 285,
+      "above25_rate": "0.395833"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "n_above_25": 257,
+      "above25_rate": "0.356944"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "n_above_25": 145,
+      "above25_rate": "0.201389"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "n_above_25": 145,
+      "above25_rate": "0.201389"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "n_above_25": 290,
+      "above25_rate": "0.402778"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "n_above_25": 261,
+      "above25_rate": "0.362500"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "n_above_25": 145,
+      "above25_rate": "0.201389"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "n_above_25": 145,
+      "above25_rate": "0.201389"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-05",
+      "n_observations": 340,
+      "n_above_25": 140,
+      "above25_rate": "0.411765"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-05",
+      "n_observations": 341,
+      "n_above_25": 126,
+      "above25_rate": "0.369501"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-05",
+      "n_observations": 340,
+      "n_above_25": 70,
+      "above25_rate": "0.205882"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-05",
+      "n_observations": 340,
+      "n_above_25": 70,
+      "above25_rate": "0.205882"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "n_above_25": 0,
+      "above25_rate": "0.000000"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "n_above_25": 0,
+      "above25_rate": "0.000000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "n_above_25": 0,
+      "above25_rate": "0.000000"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "n_above_25": 0,
+      "above25_rate": "0.000000"
+    }
+  ]
+}

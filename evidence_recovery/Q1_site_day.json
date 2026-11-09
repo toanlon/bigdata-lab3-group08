@@ -1,0 +1,166 @@
+{
+  "gold_version": 1,
+  "sql": "SELECT site,event_date,n_observations,mean_temperature_c,n_late,late_rate\n                          FROM gold ORDER BY event_date,site",
+  "rows": [
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-02",
+      "n_observations": 625,
+      "mean_temperature_c": "22.356000",
+      "n_late": 50,
+      "late_rate": "0.080000"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-02",
+      "n_observations": 625,
+      "mean_temperature_c": "22.868800",
+      "n_late": 50,
+      "late_rate": "0.080000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-02",
+      "n_observations": 620,
+      "mean_temperature_c": "23.400000",
+      "n_late": 50,
+      "late_rate": "0.080645"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-02",
+      "n_observations": 619,
+      "mean_temperature_c": "23.441034",
+      "n_late": 50,
+      "late_rate": "0.080775"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "mean_temperature_c": "22.286111",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "mean_temperature_c": "22.786111",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "mean_temperature_c": "23.286111",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-03",
+      "n_observations": 720,
+      "mean_temperature_c": "23.386111",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "mean_temperature_c": "22.300000",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "mean_temperature_c": "22.800000",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "mean_temperature_c": "23.300000",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-04",
+      "n_observations": 720,
+      "mean_temperature_c": "23.400000",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-05",
+      "n_observations": 340,
+      "mean_temperature_c": "22.388235",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-05",
+      "n_observations": 340,
+      "mean_temperature_c": "22.888235",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-05",
+      "n_observations": 340,
+      "mean_temperature_c": "23.388235",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-05",
+      "n_observations": 341,
+      "mean_temperature_c": "23.472141",
+      "n_late": 0,
+      "late_rate": "0.000000"
+    },
+    {
+      "site": "zone-1",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "mean_temperature_c": "21.300000",
+      "n_late": 5,
+      "late_rate": "0.200000"
+    },
+    {
+      "site": "zone-2",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "mean_temperature_c": "21.600000",
+      "n_late": 5,
+      "late_rate": "0.200000"
+    },
+    {
+      "site": "zone-3",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "mean_temperature_c": "21.300000",
+      "n_late": 5,
+      "late_rate": "0.200000"
+    },
+    {
+      "site": "zone-4",
+      "event_date": "2026-02-06",
+      "n_observations": 25,
+      "mean_temperature_c": "21.600000",
+      "n_late": 5,
+      "late_rate": "0.200000"
+    }
+  ]
+}

@@ -138,7 +138,32 @@ def benchmark_query(df):
     Do not use replica_id in the GROUP BY. Do not call collect() here.
     The supplied runner materializes this bounded aggregate for timing.
     """
-    raise NotImplementedError('TODO 4: benchmark_query')
+    result_df = (
+        df
+        .filter(
+            F.col("event_date") == F.lit("2026-02-06").cast("date")
+        )
+        .groupBy("site")
+        .agg(
+            F.count("*").alias("n_observations"),
+
+            F.sum("temperature_c")
+             .cast("decimal(18,2)")
+             .alias("sum_temperature_c"),
+
+            F.sum(
+                F.when(F.col("is_late"), 1).otherwise(0)
+            ).alias("n_late")
+        )
+        .select(
+            "site",
+            "n_observations",
+            "sum_temperature_c",
+            "n_late"
+        )
+    )
+
+    return result_df
 
 
 def validate_release_binding(draft, expected):
