@@ -1,0 +1,102 @@
+{
+  "source_silver_version": 1,
+  "benchmark_copies": 100,
+  "source_rows": 9710,
+  "expanded_rows": 971000,
+  "purpose": "Synthetic layout experiment; replicas are not new independent observations.",
+  "query": "event_date = 2026-02-06; GROUP BY site; count, sum_temperature_c, n_late",
+  "setup_seconds_excluded_from_query_times": {
+    "A": 18.13040030600132,
+    "B": 8.460313053999926
+  },
+  "layout_details": {
+    "A": {
+      "path": "/tmp/lab3-lakehouse/g08/attempt02/benchmarks/d3ff90f2-9891-4232-93a0-13b608c23a34/unpartitioned",
+      "version": 0,
+      "total_table_data_files": 32,
+      "total_table_bytes": 16385983,
+      "partition_columns": []
+    },
+    "B": {
+      "path": "/tmp/lab3-lakehouse/g08/attempt02/benchmarks/d3ff90f2-9891-4232-93a0-13b608c23a34/date_partitioned",
+      "version": 0,
+      "total_table_data_files": 5,
+      "total_table_bytes": 525575,
+      "partition_columns": [
+        "event_date"
+      ]
+    }
+  },
+  "warmups_per_layout": 1,
+  "measurements": [
+    {
+      "round": 1,
+      "layout": "A",
+      "elapsed_seconds": 0.904401900999801,
+      "result_equal": true
+    },
+    {
+      "round": 1,
+      "layout": "B",
+      "elapsed_seconds": 0.5754520040009083,
+      "result_equal": true
+    },
+    {
+      "round": 2,
+      "layout": "B",
+      "elapsed_seconds": 0.5380998550008371,
+      "result_equal": true
+    },
+    {
+      "round": 2,
+      "layout": "A",
+      "elapsed_seconds": 0.9306365810007264,
+      "result_equal": true
+    },
+    {
+      "round": 3,
+      "layout": "A",
+      "elapsed_seconds": 0.7375644719995762,
+      "result_equal": true
+    },
+    {
+      "round": 3,
+      "layout": "B",
+      "elapsed_seconds": 0.47324551500059897,
+      "result_equal": true
+    }
+  ],
+  "median_seconds": {
+    "A": 0.904401900999801,
+    "B": 0.5380998550008371
+  },
+  "A_median_over_B_median": 1.6807324748273609,
+  "query_result": [
+    {
+      "site": "zone-1",
+      "n_observations": 2500,
+      "sum_temperature_c": "53250.00",
+      "n_late": 500
+    },
+    {
+      "site": "zone-2",
+      "n_observations": 2500,
+      "sum_temperature_c": "54000.00",
+      "n_late": 500
+    },
+    {
+      "site": "zone-3",
+      "n_observations": 2500,
+      "sum_temperature_c": "53250.00",
+      "n_late": 500
+    },
+    {
+      "site": "zone-4",
+      "n_observations": 2500,
+      "sum_temperature_c": "54000.00",
+      "n_late": 500
+    }
+  ],
+  "table_file_count_is_not_scanned_file_count": true,
+  "cache_condition": "Repeated/warmed execution; clearCache does NOT reset OS/object-store caches."
+}

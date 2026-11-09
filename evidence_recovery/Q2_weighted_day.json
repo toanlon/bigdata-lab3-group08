@@ -1,0 +1,36 @@
+{
+  "gold_version": 1,
+  "sql": "SELECT event_date, SUM(n_observations) AS n_observations,\n                          CAST(SUM(sum_temperature_c)/SUM(n_observations) AS DECIMAL(18,6)) AS weighted_mean_c,\n                          CAST(AVG(mean_temperature_c) AS DECIMAL(18,6)) AS naive_mean_of_means_c\n                          FROM gold GROUP BY event_date ORDER BY event_date",
+  "rows": [
+    {
+      "event_date": "2026-02-02",
+      "n_observations": 2489,
+      "weighted_mean_c": "23.014665",
+      "naive_mean_of_means_c": "23.016459"
+    },
+    {
+      "event_date": "2026-02-03",
+      "n_observations": 2880,
+      "weighted_mean_c": "22.936111",
+      "naive_mean_of_means_c": "22.936111"
+    },
+    {
+      "event_date": "2026-02-04",
+      "n_observations": 2880,
+      "weighted_mean_c": "22.950000",
+      "naive_mean_of_means_c": "22.950000"
+    },
+    {
+      "event_date": "2026-02-05",
+      "n_observations": 1361,
+      "weighted_mean_c": "23.034533",
+      "naive_mean_of_means_c": "23.034212"
+    },
+    {
+      "event_date": "2026-02-06",
+      "n_observations": 100,
+      "weighted_mean_c": "21.450000",
+      "naive_mean_of_means_c": "21.450000"
+    }
+  ]
+}
