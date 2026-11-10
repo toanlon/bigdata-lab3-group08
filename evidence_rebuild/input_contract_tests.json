@@ -1,0 +1,20 @@
+[
+  {
+    "case": "VALUE",
+    "passed": true,
+    "observed": "VALUE",
+    "writes_performed": 0
+  },
+  {
+    "case": "REQUIRED_VALUE",
+    "passed": true,
+    "observed": "VALUE",
+    "writes_performed": 0
+  },
+  {
+    "case": "SCHEMA_ALLOWLIST",
+    "passed": true,
+    "observed": "SCHEMA_ALLOWLIST",
+    "writes_performed": 0
+  }
+]

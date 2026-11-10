@@ -1,0 +1,11 @@
+{
+  "run_id": "fda53298-f5a0-4c71-b0ca-8c6bbaa88094",
+  "job": "release",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "fc000df08bb3a398a1d6b4732b67a90b25ad3ab3a6f2c791a7b97181e80dc852",
+  "scaffold_sha256": "5034358a1ceadb2c8d1e8110179c055c7429980a2f9b71778a02c06fbd444739",
+  "outputs": [
+    "evidence_rebuild/release_candidate"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "529f3877-0d0b-461c-b246-befbdda19762",
+  "job": "incremental",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "1ef903e4f86ddf01b848e575964bc5fea39d4aa58ae8b9e89bd8dbc8507d1013",
+  "scaffold_sha256": "5034358a1ceadb2c8d1e8110179c055c7429980a2f9b71778a02c06fbd444739",
+  "outputs": [
+    "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/silver@1",
+    "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/gold@1"
+  ]
+}

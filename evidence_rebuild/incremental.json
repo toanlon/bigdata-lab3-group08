@@ -1,0 +1,14 @@
+{
+  "incoming_rows": 140,
+  "incoming_winners": 130,
+  "bronze_before_replay": 9750,
+  "bronze_after_replay": 9750,
+  "silver_rows": 9710,
+  "logical_sha256_after": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a",
+  "logical_sha256_replay": "d0e76f8b3525282d09c71a2e813ec91abcad2440f6f3eeaf8b7cbc55d922162a",
+  "silver_after_version": 1,
+  "silver_replay_version": 2,
+  "time_travel_passed": true,
+  "winner_reordering_passed": true,
+  "note": "Replay may add a no-op commit. Business-state equivalence, not an unchanged log version, is required."
+}

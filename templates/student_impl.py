@@ -176,4 +176,65 @@ def validate_release_binding(draft, expected):
     or HANDOFF_BINDING. Missing keys must reject, never crash/pass.
     This is a course release check, not a digital signature or IAM control.
     """
-    raise NotImplementedError('TODO 5: validate_release_binding')
+    reasons = []
+
+    # 1. Validate input structures
+    if not isinstance(draft, dict) or not isinstance(expected, dict):
+        return False, ["METADATA", "HANDOFF_BINDING",
+                       "CODE_BINDING", "VERSION_BINDING"]
+
+    # 2. Required identities
+    required_roles = ("author", "reviewer", "steward")
+    for role in required_roles:
+        value = draft.get(role)
+        if not isinstance(value, str) or not value.strip():
+            reasons.append("METADATA")
+
+    # 3. Reviewer must be independent from author
+    author = draft.get("author")
+    reviewer = draft.get("reviewer")
+    if (isinstance(author, str) and author.strip()
+            and isinstance(reviewer, str) and reviewer.strip()
+            and author.strip() == reviewer.strip()):
+        reasons.append("REVIEW")
+
+    # 4. Bind the upstream handoff
+    if ("handoff_logical_sha256" not in draft
+            or "handoff_logical_sha256" not in expected
+            or draft.get("handoff_logical_sha256")
+            != expected.get("handoff_logical_sha256")):
+        reasons.append("HANDOFF_BINDING")
+
+    # 5. Bind the implementation that generated Gold
+    if ("code_sha256" not in draft
+            or "code_sha256" not in expected
+            or draft.get("code_sha256") != expected.get("code_sha256")):
+        reasons.append("CODE_BINDING")
+
+    # 6. Bind the exact Silver and Gold snapshots
+    version_fields = (
+        "silver_path",
+        "silver_version",
+        "gold_path",
+        "gold_version",
+        "gold_source_silver_version"
+    )
+
+    for field in version_fields:
+        if (field not in draft
+                or field not in expected
+                or draft.get(field) != expected.get(field)):
+            reasons.append("VERSION_BINDING")
+            break
+
+    # 7. Gold must come from the exact Silver version declared in the draft
+    if ("gold_source_silver_version" not in draft
+            or "silver_version" not in draft
+            or draft.get("gold_source_silver_version")
+            != draft.get("silver_version")):
+        reasons.append("VERSION_BINDING")
+
+    # Remove duplicate rejection reasons
+    reasons = list(dict.fromkeys(reasons))
+
+    return len(reasons) == 0, reasons

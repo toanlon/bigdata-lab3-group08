@@ -1,0 +1,13 @@
+{
+  "run_id": "79dd6725-9378-4ef2-9b74-388fbf149b5f",
+  "job": "bootstrap",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "1ef903e4f86ddf01b848e575964bc5fea39d4aa58ae8b9e89bd8dbc8507d1013",
+  "scaffold_sha256": "5034358a1ceadb2c8d1e8110179c055c7429980a2f9b71778a02c06fbd444739",
+  "outputs": [
+    "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/bronze",
+    "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/silver",
+    "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/gold"
+  ]
+}

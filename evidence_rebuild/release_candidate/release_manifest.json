@@ -1,0 +1,45 @@
+{
+  "status": "CANDIDATE_NOT_OWNER_PUBLISHED",
+  "release_id": "lab3-g08-attempt02",
+  "binding": {
+    "release_id": "lab3-g08-attempt02",
+    "author": "Nguyen Duy Tu",
+    "reviewer": "Nguyen Van Toan",
+    "steward": "Le Duc Viet",
+    "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+    "handoff_kind": "course_fallback_not_student_approval",
+    "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+    "code_sha256": "1ef903e4f86ddf01b848e575964bc5fea39d4aa58ae8b9e89bd8dbc8507d1013",
+    "silver_path": "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/silver",
+    "silver_version": 1,
+    "gold_path": "/tmp/lab3-lakehouse-rebuild/g08/attempt02/tables/gold",
+    "gold_version": 1,
+    "gold_source_silver_version": 1,
+    "as_of": "2026-02-09T00:00:00Z",
+    "timezone": "UTC",
+    "known_limitations": [
+      "Synthetic fixture only.",
+      "Inherited QA sample disagreements are not repaired.",
+      "A version tuple is a release protocol, not a cross-table transaction."
+    ],
+    "release_validator_sha256": "fc000df08bb3a398a1d6b4732b67a90b25ad3ab3a6f2c791a7b97181e80dc852"
+  },
+  "objects": [
+    {
+      "key": "gold.json",
+      "bytes": 6421,
+      "sha256": "095c9b84ddcb2426f2a5cbbd7d46b0a35c579c7c609daba6021a7295cf5be8b4"
+    },
+    {
+      "key": "snapshot_binding.json",
+      "bytes": 1044,
+      "sha256": "eaf8bb5b14cd391fbb01301b9aa6324b744c9adfe28e1da355deb0fb49371ecb"
+    },
+    {
+      "key": "catalog.json",
+      "bytes": 5062,
+      "sha256": "4f2f1306aeeb616a5264313c5c48ddf108094d3a2e51226c5cd22e9f77addd85"
+    }
+  ],
+  "publication_protocol": "Independent owner recheck; upload approved artifacts; manifest last. Never overwrite a release prefix."
+}

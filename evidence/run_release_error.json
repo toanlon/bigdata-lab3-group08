@@ -1,0 +1,7 @@
+{
+  "run_id": "30b0c15b-8371-446c-9ee7-c07de6255223",
+  "job": "release",
+  "status": "FAIL",
+  "error_type": "Py4JJavaError",
+  "message": "An error occurred while calling o58.load.\n: java.io.FileNotFoundException: No such file or directory: file:/tmp/lab3-lakehouse/g08/attempt02/tables/silver/_delta_log\n\tat io.delta.storage.HadoopFileSystemLogStore.listFrom(HadoopFileSystemLogStore.java:56)\n\tat org.apache.spark.sql.delta.storage.LogStoreAdaptor.listFrom(LogStore.scala:497)\n\tat org.apache.spark.sql.delta.storage.DelegatingLogStore.listFrom(DelegatingLogStore.scala:130)\n\tat org.apache.spark.sql.delta.DeltaHistoryManager.getEarliestRe"
+}

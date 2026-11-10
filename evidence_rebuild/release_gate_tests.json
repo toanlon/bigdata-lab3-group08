@@ -1,0 +1,45 @@
+[
+  {
+    "case": "valid",
+    "expected_pass": true,
+    "observed_pass": true,
+    "reasons": [],
+    "test_passed": true
+  },
+  {
+    "case": "mixed_version",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "VERSION_BINDING"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "self_review",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "REVIEW"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "missing_steward",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "METADATA"
+    ],
+    "test_passed": true
+  },
+  {
+    "case": "wrong_code",
+    "expected_pass": false,
+    "observed_pass": false,
+    "reasons": [
+      "CODE_BINDING"
+    ],
+    "test_passed": true
+  }
+]
